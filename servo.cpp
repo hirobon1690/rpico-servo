@@ -15,7 +15,7 @@ void Servo::init() {
 
 void Servo::write_ms(float ms) {
     int level = int(ms / 0.0008);
-    printf("%d\n", level);
+    // printf("%d\n", level);
     pwm_set_chan_level(slice_num, channel, level);
     pwm_set_enabled(slice_num, 1);
 }
