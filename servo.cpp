@@ -26,5 +26,10 @@ void Servo::write(float val) {
     } else if (val > 180) {
         val = 180;
     }
+    val+=offset;
     write_ms(0.5 + (2.4 - 0.5) / 180 * val);
+}
+
+void Servo::setOffset(float val){
+    offset = val;
 }
